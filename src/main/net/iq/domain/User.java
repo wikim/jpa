@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import com.sun.tracing.dtrace.ArgsAttributes;
 
@@ -11,6 +12,7 @@ import com.sun.tracing.dtrace.ArgsAttributes;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class User {
     
     @Id

@@ -3,6 +3,7 @@ package net.iq.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jws.soap.SOAPBinding.Use;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
@@ -26,10 +27,24 @@ public class UserJpaProviderImple implements UserProvider{
     @Override
     public List<User>  findAllUsers() {
         List<User> users = new ArrayList<User>();
-        
+        EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+        users = (List<User>) em.createQuery("FROM USER U ORDER BY U.NAME ASC");
         return users;
         
         
+    }
+    
+
+    @Override
+    public User findUserByUserId(String userId) {
+        EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        User findUser = em.find(User.class, userId);
+        tx.commit();
+        em.clear();
+        
+        return findUser;
     }
 
 

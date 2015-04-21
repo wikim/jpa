@@ -7,4 +7,5 @@ import net.iq.domain.User;
 public interface UserProvider {
     public void insertUser(User user);
     public List<User>  findAllUsers();
+    public User  findUserByUserId(String userId);
 }
