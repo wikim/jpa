@@ -3,9 +3,14 @@ package net.iq.domain;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.Data;
+
+import com.sun.tracing.dtrace.ArgsAttributes;
+
 
 
 @Entity
+@Data
 public class User {
     
     @Id

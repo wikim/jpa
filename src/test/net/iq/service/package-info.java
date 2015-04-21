@@ -5,4 +5,4 @@
  * @author wikim
  *
  */
-package test.java.net.iq.service;
+package test.net.iq.service;

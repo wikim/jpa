@@ -43,7 +43,7 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'mysql:mysql-connector-java:5.1.35'
 	compile 'org.hibernate:hibernate-entitymanager:4.2.19.Final'
-    compile 'org.projectlombok:lombok:$lombokVersion'
+	compile 'org.projectlombok:lombok:1.16.4'
     testCompile 'junit:junit:4.11'
 }
 
